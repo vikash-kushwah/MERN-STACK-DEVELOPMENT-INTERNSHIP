@@ -77,7 +77,8 @@ To run the backend server, navigate to the `backend` folder and run:
 npm install
 npm run server
 ```
-##React Projects
+### React Projects
+
 To run the React projects, navigate to the respective project folder and run:
 ```sh
 npm install
