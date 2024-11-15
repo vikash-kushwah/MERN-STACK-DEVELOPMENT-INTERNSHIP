@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-div coloring</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            height: 70vh;
+            width: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid black;
+        }
+
+        .input {
+            margin-bottom: 40px;
+        }
+
+        #color,
+        #num,
+        #btn {
+            margin: 2px;
+            padding: 8px;
+            border: 2px solid rgb(83, 83, 83);
+            border-radius: 4px;
+        }
+
+        #btn {
+            background-color: rgb(205, 203, 203);
+        }
+        #btn:hover{
+            /* text-shadow: 0px 0px 1px rgb(110, 109, 109); */
+            background-color: rgb(160, 159, 159);
+        }
+
+        .divs {
+            display: flex;
+            justify-content: center;
+            width: 71vh;
+        }
+
+        .box {
+            width: 120px;
+            height: 120px;
+            margin: 2px;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <div class="content">
+            <div class="input">
+                <input type="text" id="color" placeholder="Enter Your Color Name">
+                <input type="text" id="num" placeholder="Enter Your Div">
+                <button id="btn">Submit</button>
+            </div>
+            <div class="divs">
+                <div id="div1" class="box"></div>
+                <div id="div2" class="box"></div>
+                <div id="div3" class="box"></div>
+                <div id="div4" class="box"></div>
+            </div>
+            <div class="divs">
+                <div id="div5" class="box"></div>
+                <div id="div6" class="box"></div>
+                <div id="div7" class="box"></div>
+                <div id="div8" class="box"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector("#btn").onclick=function(){
+            let color=document.getElementById("color").value;
+            let divnum= Number(document.getElementById("num").value);
+            // console.log(color,divnum)
+            document.getElementById(`div${divnum}`).style.backgroundColor = `${color}`;
+        }
+    </script>
+</body>
+
+</html>

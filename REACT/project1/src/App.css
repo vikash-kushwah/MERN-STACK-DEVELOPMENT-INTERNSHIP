@@ -1,0 +1,26 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.header{
+  height: 20vh;
+  background-color: red;
+}
+.section{
+  height: 60vh;
+  background-color: yellow;
+  display: flex;
+}
+.left{
+  width: 20%;
+  background-color: aqua;
+}
+.right{
+  width: 80%;
+  background-color: chocolate;
+}
+.footer{
+  height: 20vh;
+  background-color: blue;
+}

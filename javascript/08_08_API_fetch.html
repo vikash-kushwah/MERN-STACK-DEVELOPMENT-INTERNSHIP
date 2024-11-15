@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API fetch</title>
+</head>
+
+<body>
+    <table border="2">
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Phone</th>
+            <th>Addess</th>
+            <th>Image</th>
+        </tr>
+    </table>
+    <script>
+        async function FetchData() {
+            let API = await fetch("https://dummyjson.com/users");
+            let JSON_Data = await API.json();
+            JSON_Data.users.forEach(item => {
+                console.log(item)
+                let tr = document.createElement('tr');
+
+                let id = document.createElement('td');
+                let username = document.createElement('td');
+                let email = document.createElement('td');
+                let age = document.createElement('td');
+                let phone = document.createElement('td');
+                let address = document.createElement('td');
+                let image = document.createElement('td');
+                let image1 = document.createElement('img')
+
+                id.innerHTML = item.id;
+                username.innerHTML = item.username;
+                email.innerHTML = item.email;
+                age.innerHTML = item.age;
+                phone.innerHTML = item.phone;
+                address.innerHTML = item.address.address;
+                image1.src = item.image;
+
+                image.append(image1);
+                tr.append(id);
+                tr.append(username);
+                tr.append(email);
+                tr.append(age);
+                tr.append(phone);
+                tr.append(address);
+                tr.append(image);
+
+                document.querySelector('table').append(tr);
+            });
+
+        }
+
+        FetchData();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+used as client side language and not used as server side language
+
+//rfcg short form to create js files and functions
