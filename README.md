@@ -84,6 +84,7 @@ To run the React projects, navigate to the respective project folder and run:
 npm install
 npm run dev
 ```
-##Author
+## Author
+
 Vikash Kushwaha
 
